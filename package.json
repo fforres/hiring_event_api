@@ -1,11 +1,11 @@
 {
   "name": "landing_hiring_api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "api for the hiring event (from devs for devs)",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "build": "babel src -d lib",
+    "build": "rimraf lib && babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "babel-cli": "6.16.0",
     "babel-eslint": "7.0.0",
-    "babel-polyfill": "6.16.0",
+    "babel-plugin-transform-runtime": "6.15.0",
     "babel-preset-airbnb": "2.1.1",
     "babel-preset-es2015": "6.16.0",
     "babel-register": "6.16.3",
@@ -38,12 +38,14 @@
     "eslint-plugin-import": "2.0.0",
     "eslint-plugin-jsx-a11y": "2.2.2",
     "eslint-plugin-react": "6.3.0",
-    "nodemon": "1.10.2"
+    "nodemon": "1.10.2",
+    "rimraf": "2.5.4"
   },
   "babel": {
     "presets": [
       "es2015"
-    ]
+    ],
+    "plugins": ["transform-runtime"]
   },
   "eslintConfig": {
     "presets": [
