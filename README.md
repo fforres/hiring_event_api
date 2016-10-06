@@ -1,2 +1,2 @@
-# landing_hiring_event
-Landing page for the hiring event (from devs for devs)
+# hiring_event_API
+API for getting Tags, searching tags, and saving new devs for the "hiring event"

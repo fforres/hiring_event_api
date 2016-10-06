@@ -1,6 +1,6 @@
 {
   "name": "landing_hiring_api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "api for the hiring event (from devs for devs)",
   "main": "index.js",
   "scripts": {
