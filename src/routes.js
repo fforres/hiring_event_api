@@ -1,15 +1,24 @@
 /* eslint require-yield: 1 */
 import koaRouter from 'koa-router';
+import skills from 'skills';
+import { getTagsByName, saveNewUser } from './model';
 
 const router = koaRouter();
 
 router.get('/', function* () {
   this.body = 'Hello World!';
 });
-router.post('/linkedin', '/linkedin/:user_id/', function* () {
-  console.log(this.params);
-  console.log(this.request.body);
-  this.body = 'wazaaa';
+
+router.get('/tags', function* () {
+  this.body = skills;
+});
+
+router.post('/tags', function* () {
+  this.body = yield getTagsByName(this.request.body.searchString || '');
+});
+
+router.post('/linkedin', function* () {
+  this.body = yield saveNewUser(this.request.body);
 });
 
 export default router;
