@@ -9,7 +9,7 @@ router.get('/', function* () {
 });
 
 router.get('/tags', function* () {
-  this.body = yield getTagsByName(this.request.query.searchString || '');
+  this.body = yield getTagsByName(decodeURI(this.request.query.searchString) || '');
 });
 
 router.post('/linkedin', function* () {
