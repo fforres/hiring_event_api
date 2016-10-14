@@ -1,6 +1,6 @@
 /* eslint require-yield: 1 */
 import koaRouter from 'koa-router';
-import skills from 'skills'
+import skills from 'skills';
 import { getTagsByName, saveNewUser } from './model';
 
 const router = koaRouter();
