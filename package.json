@@ -22,6 +22,7 @@
   "dependencies": {
     "koa": "1.2.4",
     "koa-bodyparser": "2.2.0",
+    "koa-cors": "0.0.16",
     "koa-router": "5.4.0",
     "mongodb": "2.2.10",
     "skills": "1.0.0"
@@ -45,7 +46,9 @@
     "presets": [
       "es2015"
     ],
-    "plugins": ["transform-runtime"]
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "eslintConfig": {
     "presets": [

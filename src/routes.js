@@ -13,8 +13,8 @@ router.get('/tags', function* () {
   this.body = skills;
 });
 
-router.post('/tags', function* () {
-  this.body = yield getTagsByName(this.request.body.searchString || '');
+router.get('/tagsByString', function* () {
+  this.body = yield getTagsByName(decodeURI(this.request.query.searchString) || '');
 });
 
 router.post('/linkedin', function* () {
